@@ -36,3 +36,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.log
+*.xml
+MatchStickGameV2/UserSettings/Layouts/default-2022.dwlt
+MatchStickGameV2/UserSettings/EditorUserSettings.asset
