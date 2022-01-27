@@ -74,7 +74,11 @@ namespace CMF
 
 		[Tooltip("Optional camera transform used for calculating movement direction. If assigned, character movement will take camera view into account.")]
 		public Transform cameraTransform;
+
+		public bool ignoreHorizontal = false;
+		public bool ignoreVertical = false;
 		
+
 		//Get references to all necessary components;
 		void Awake () {
 			mover = GetComponent<Mover>();
@@ -184,15 +188,42 @@ namespace CMF
 			//If no camera transform has been assigned, use the character's transform axes to calculate the movement direction;
 			if(cameraTransform == null)
 			{
-				_velocity += tr.right * characterInput.GetHorizontalMovementInput();
-				_velocity += tr.forward * characterInput.GetVerticalMovementInput();
+				if (ignoreHorizontal)
+				{
+					_velocity += tr.forward * characterInput.GetVerticalMovementInput();
+
+				}
+				if (ignoreVertical)
+				{
+					_velocity += tr.right * characterInput.GetHorizontalMovementInput();
+
+				}
+				if (!ignoreHorizontal && !ignoreVertical)
+				{
+					_velocity += tr.right * characterInput.GetHorizontalMovementInput();
+					_velocity += tr.forward * characterInput.GetVerticalMovementInput();
+				}
 			}
 			else
 			{
 				//If a camera transform has been assigned, use the assigned transform's axes for movement direction;
 				//Project movement direction so movement stays parallel to the ground;
-				_velocity += Vector3.ProjectOnPlane(cameraTransform.right, tr.up).normalized * characterInput.GetHorizontalMovementInput();
-				_velocity += Vector3.ProjectOnPlane(cameraTransform.forward, tr.up).normalized * characterInput.GetVerticalMovementInput();
+				
+				if (ignoreHorizontal)
+				{
+					_velocity += Vector3.ProjectOnPlane(cameraTransform.forward, tr.up).normalized * characterInput.GetVerticalMovementInput();
+
+				}
+				if (ignoreVertical)
+				{
+					_velocity += Vector3.ProjectOnPlane(cameraTransform.right, tr.up).normalized * characterInput.GetHorizontalMovementInput();
+
+				}
+				if (!ignoreHorizontal && !ignoreVertical)
+				{
+					_velocity += Vector3.ProjectOnPlane(cameraTransform.right, tr.up).normalized * characterInput.GetHorizontalMovementInput();
+					_velocity += Vector3.ProjectOnPlane(cameraTransform.forward, tr.up).normalized * characterInput.GetVerticalMovementInput();
+				}
 			}
 
 			//If necessary, clamp movement vector to magnitude of 1f;
