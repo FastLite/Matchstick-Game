@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    public GameObject endScreen;
+    //public GameObject endScreen;
     public bool gameIsEnded = false;
     public Slider sensativity;
     public Slider volume;

@@ -7,7 +7,6 @@ public class MainMenuFader : MonoBehaviour
 {
     public GameObject warning;
     public TextMeshProUGUI warningTitle;
-    public TextMeshProUGUI warningTxt;
 
     public Image blackFade;
     public GameObject fadeGO;
@@ -25,7 +24,6 @@ public class MainMenuFader : MonoBehaviour
         warning.SetActive(true);
 
         //warning image fades to 0 alpha   
-        warningTxt.CrossFadeAlpha(0, 2, false);
         warningTitle.CrossFadeAlpha(0, 4, false);
 
         yield return new WaitForSeconds(3);
