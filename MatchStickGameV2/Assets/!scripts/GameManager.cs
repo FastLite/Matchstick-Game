@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public bool gameIsEnded = false;
     public Slider sensativity;
     public Slider volume;
-   
+    
 
     private void Awake()
     {
