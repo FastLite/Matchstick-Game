@@ -12,9 +12,9 @@ public class PauseGame : MonoBehaviour
     private bool pauseActive = false;
     public  AudioListener pLayerListener;
     public GameObject note;
-
     private void Start()
     {
+        
         Time.timeScale = 1;
     }
 
