@@ -30,10 +30,15 @@ public class drag : MonoBehaviour
             hitbox = false;
         }
 
-        if (hitbox && Input.GetButton("Jump"))
+        if (currentBox !=null)
+        {
+            currentBox.localPosition = new Vector3(0, 0, 0);
+        }
+
+        if (hitbox && Input.GetButtonDown("Jump"))
         {
             currentBox = hit.collider.gameObject.transform;
-                currentBox.position.Set(0,0,0);
+                
                 currentBox.parent = playerParent;
                 int y = Mathf.FloorToInt(playerParent.transform.eulerAngles.y) ;
                 if ((y< 95 && y >85) ||(y> 265 && y <280 ))
@@ -46,7 +51,7 @@ public class drag : MonoBehaviour
                 } 
             
         }
-        if (!hitbox || Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Jump"))
         {
             if (currentBox ==null)
             {
@@ -67,6 +72,7 @@ public class drag : MonoBehaviour
 
     private void ResetConstraints()
     {
-        queue.Invoke();
+        currentBox.position.Set(0,0,0);
+
     }
 }
