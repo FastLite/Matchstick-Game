@@ -29,18 +29,15 @@ public class drag : MonoBehaviour
         {
             hitbox = false;
         }
+        
 
-        if (currentBox !=null)
-        {
-            currentBox.localPosition = new Vector3(0, 0, 0);
-        }
-
-        if (hitbox && Input.GetButtonDown("Jump"))
+        if (hitbox && Input.GetButton("Jump"))
         {
             currentBox = hit.collider.gameObject.transform;
-                
+                currentBox.position.Set(0,0,0);
                 currentBox.parent = playerParent;
                 int y = Mathf.FloorToInt(playerParent.transform.eulerAngles.y) ;
+                GetComponentInChildren<TurnTowardControllerVelocity>().enabled = false;
                 if ((y< 95 && y >85) ||(y> 265 && y <280 ))
                 {
                     controller.ignoreHorizontal = true;
@@ -48,21 +45,21 @@ public class drag : MonoBehaviour
                 else if ((y> -1 && y <2) || (y >175 && y <185))
                 {
                     controller.ignoreVertical = true;
-                } 
-            
+                }
         }
-        if (Input.GetButtonUp("Jump"))
+        if (!hitbox || Input.GetButtonUp("Jump"))
         {
             if (currentBox ==null)
             {
                 return;
             }
+            GetComponentInChildren<TurnTowardControllerVelocity>().enabled = true;
             controller.ignoreHorizontal = false;
             controller.ignoreVertical = false;
             currentBox.parent = null;
             currentBox = null;
         }
-       
+        
         
         
         
