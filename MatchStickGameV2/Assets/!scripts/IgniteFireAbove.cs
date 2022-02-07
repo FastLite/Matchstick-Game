@@ -10,7 +10,7 @@ public class IgniteFireAbove : MonoBehaviour
     {
         if (other.CompareTag("FirePlace"))
         {
-            other.GetComponent<Fire>().DoTheFlip(torch);
+            other.GetComponent<Fire>().InteractWithFire(torch);
         }
     }
 }

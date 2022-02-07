@@ -7,11 +7,9 @@ public class PauseGame : MonoBehaviour
 {
     public GameObject PauseCanvas;
     public GameObject settingsCanvas;
-    public GameObject overlayCam;
     public GameObject mainCam;
     private bool pauseActive = false;
     public  AudioListener pLayerListener;
-    public GameObject note;
     private void Start()
     {
         
@@ -24,30 +22,37 @@ public class PauseGame : MonoBehaviour
             switch (pauseActive)
             {
                 case false:
-                    PauseCanvas.SetActive(true);
-                    settingsCanvas.SetActive(false);
-                    overlayCam.SetActive(false);
-                    pauseActive = true;
-
-                    Time.timeScale = 0;
-                    Cursor.lockState = CursorLockMode.None;
-                    AudioListener.pause = true;
+                    TurnOnUI();
                     break;
                 case true:
-                    overlayCam.SetActive(true);
-                    PauseCanvas.SetActive(false);
-                    settingsCanvas.SetActive(false);
-                    pauseActive = false;
-                    Time.timeScale = 1;
-                    Cursor.lockState = CursorLockMode.Locked;
-                    AudioListener.pause = false;
+                    TurnOffUI();
                     break;
             }
     }
 
     // Update is called once per frame
     void Update()
-    {if (Input.GetKeyDown(KeyCode.Escape) && !note.activeInHierarchy)
+    {if (Input.GetKeyDown(KeyCode.Escape))
         PauseUnpause();
+    }
+
+    void TurnOnUI()
+    {
+        PauseCanvas.SetActive(true);
+        settingsCanvas.SetActive(false);
+        pauseActive = true;
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        AudioListener.pause = true; 
+    }
+
+    void TurnOffUI()
+    {
+        PauseCanvas.SetActive(false);
+        settingsCanvas.SetActive(false);
+        pauseActive = false;
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        AudioListener.pause = false; 
     }
 }

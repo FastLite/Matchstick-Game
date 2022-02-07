@@ -16,7 +16,7 @@ public class Fire : MonoBehaviour
 
      [SerializeField] private FireSourceType objectType;
 
-     public void DoTheFlip(GameObject o)
+     public void InteractWithFire(GameObject o)
      {
          switch (objectType)
          {

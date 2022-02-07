@@ -11,8 +11,8 @@ public class TorchState : MonoBehaviour
     }
 
    public GameObject torchGO;
-   
 
+   private Transform raycastPoint;
     public MyEnum state;
 
     public void ChangeTorchState(MyEnum _state)
@@ -20,13 +20,18 @@ public class TorchState : MonoBehaviour
         state = _state;
     }
 
+    private void Start()
+    {
+        raycastPoint = gameObject.GetComponent<Interact>().rayPoint;
+    }
+
 
     private void Update()
     {
         
             RaycastHit hit;
-            Debug.DrawRay(transform.position, transform.forward, Color.green);
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, .5f) )
+            Debug.DrawRay(raycastPoint.position, raycastPoint.forward, Color.green);
+            if (Physics.Raycast(raycastPoint.position, raycastPoint.TransformDirection(Vector3.forward), out hit, .5f) )
             {
                 GameObject go = hit.collider.gameObject;
                 Debug.Log(go);
@@ -36,11 +41,10 @@ public class TorchState : MonoBehaviour
                     {
                         if (state == MyEnum.Without)
                         {
-                            return;
                         }
                         else
                         {
-                            go.GetComponent<Fire>().DoTheFlip(gameObject);
+                            go.GetComponent<Fire>().InteractWithFire(gameObject);
                         }
                     }
                     else if (go.CompareTag("TorchPile"))
