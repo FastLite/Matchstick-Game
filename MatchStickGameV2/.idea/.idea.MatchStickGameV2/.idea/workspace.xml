@@ -20,23 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86c2c141-be0e-42a2-a30a-ba1f992a2223" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/!scripts/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/Fire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/!scripts/IgniteFireAbove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/IgniteFireAbove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/!scripts/PauseGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/PauseGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/!scripts/TorchState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/TorchState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/!scripts/drag.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/!scripts/drag.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/!scripts/enterButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/enterButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/matchstick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/matchstick.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!scripts/PressurePlate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/PressurePlate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/ButtonStand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/ButtonStand.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/FirePlaceWithFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/FirePlaceWithFire.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +75,13 @@
         <option value="$PROJECT_DIR$/obj/project.assets.json" />
         <option value="$PROJECT_DIR$/Assets/!scripts/IgniteFireAbove.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/!scripts/PressurePlate.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/drag.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/PauseGame.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/TorchState.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/Fire.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/Interact.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/enterButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/!scripts/PressurePlate.cs" />
       </list>
     </option>
   </component>
@@ -158,7 +145,7 @@
       <workItem from="1643985265606" duration="9934000" />
       <workItem from="1644171683147" duration="2232000" />
       <workItem from="1644249536656" duration="364000" />
-      <workItem from="1644250327153" duration="9882000" />
+      <workItem from="1644250327153" duration="10990000" />
     </task>
     <servers />
   </component>

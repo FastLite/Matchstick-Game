@@ -8,7 +8,6 @@ public class CustomTrigger : MonoBehaviour
 {
   
     public GameObject myObject;
-    public bool turnOn, lockDoor, playdoorAnimation;
     private bool didPlay;
     public UnityEvent myEvent;
     public int delay;
@@ -29,14 +28,6 @@ public class CustomTrigger : MonoBehaviour
             Debug.Log(myEvent.GetPersistentEventCount());
             Invoke(nameof(DoEvent), delay);
         }
-
-        
-        if (myObject!=null)
-        {
-            myObject.SetActive(turnOn);
-        }
-
-        
     }
 
     private void DoEvent()

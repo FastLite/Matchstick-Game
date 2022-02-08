@@ -7,7 +7,10 @@ using UnityEngine.UI;
 
 public class PressurePlate : MonoBehaviour
 {
-    public UnityEvent queue;
+    public UnityEvent onAction;
+    public UnityEvent offAction;
+    [SerializeField]private bool oneTime;
+    [SerializeField]private bool wasOn;
 
     [SerializeField] private float distanceCheck = 0.05f;
     private void OnTriggerStay(Collider other)
@@ -15,15 +18,24 @@ public class PressurePlate : MonoBehaviour
         if (other.CompareTag("Player") || other.CompareTag("Box"))
         {
             float distance = Vector3.Distance(transform.position, other.transform.position);
-            Debug.Log(distance);
             if (distance<distanceCheck)
             {
-                MeshRenderer render = GetComponent<MeshRenderer>();
-                if (render!= null)
+                if (!wasOn)
                 {
-                    render.material.color = Color.blue;
+                    onAction.Invoke();
                 }
-                Destroy(this);
+
+                wasOn = true;
+
+            }
+            else if (!oneTime)
+            {
+                if (wasOn)
+                {
+                    offAction.Invoke();
+                }
+
+                wasOn = false;
             }
         }
     }
