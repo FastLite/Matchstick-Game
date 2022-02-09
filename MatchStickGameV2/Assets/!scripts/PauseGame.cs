@@ -9,7 +9,7 @@ public class PauseGame : MonoBehaviour
     public GameObject settingsCanvas;
     public GameObject mainCam;
     private bool pauseActive = false;
-    public  AudioListener pLayerListener;
+    public  AudioListener playerListener;
     private void Start()
     {
         
