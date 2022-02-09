@@ -12,14 +12,17 @@
           <e p="CustomTrigger.cs" t="Include" />
           <e p="enterButton.cs" t="Include" />
           <e p="Fire.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
           <e p="IgniteFireAbove.cs" t="Include" />
           <e p="Interact.cs" t="Include" />
           <e p="MainMenuFader.cs" t="Include" />
+          <e p="Managers" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+          </e>
           <e p="PauseGame.cs" t="Include" />
           <e p="PressurePlate.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
-          <e p="StateChange.cs" t="Include" />
+          <e p="SettingsMenu.cs" t="Include" />
           <e p="TorchState.cs" t="Include" />
         </e>
         <e p="_Taurean Folder" t="Include">
