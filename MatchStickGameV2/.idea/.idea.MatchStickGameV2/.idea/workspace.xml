@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86c2c141-be0e-42a2-a30a-ba1f992a2223" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Character + camera placement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Character + camera placement.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +144,7 @@
       <workItem from="1644171683147" duration="2232000" />
       <workItem from="1644249536656" duration="364000" />
       <workItem from="1644250327153" duration="10990000" />
-      <workItem from="1644327010473" duration="8901000" />
+      <workItem from="1644327010473" duration="10082000" />
     </task>
     <servers />
   </component>
