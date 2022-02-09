@@ -6,6 +6,14 @@ using UnityEngine.Events;
 
 public class enterButton : MonoBehaviour
 {
+    public enum ButtonType
+    {
+        OneTime, Repeatable
+    }
+
+    public ButtonType type = ButtonType.Repeatable;
+    
+    
     public UnityEvent eventOn;
     public UnityEvent eventOff;
     public Animation anim;
@@ -17,21 +25,37 @@ public class enterButton : MonoBehaviour
         FindObjectOfType<Counter>().UpdateCount();
     }
 
+    public void debug()
+    {
+        Debug.Log("EventStarted");
+    }
+
     public void Activate()
     {
-        if (currentState)
+        if (anim.isPlaying)
         {
-            eventOn?.Invoke();
+            Debug.Log("Can't activate button, animation is still playing");
         }
         else
         {
-            eventOff?.Invoke();
-        }
+            if (!currentState)
+            {
+                eventOn?.Invoke();
+                currentState = !currentState ;
+            }
+            else if (type != ButtonType.OneTime)
+            {
+                eventOff?.Invoke();
+                currentState = !currentState ;
+            }
 
-        if (anim!=null)
-        {
-            anim.Play();
+            if (anim!=null)
+            {
+                anim.Play();
+                Debug.Log(eventOn);
+            }
         }
+        
 
         
 

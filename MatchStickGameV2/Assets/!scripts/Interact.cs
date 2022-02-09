@@ -27,6 +27,8 @@ public class Interact : MonoBehaviour
             GameObject go = hit.collider.gameObject;
             if (go.CompareTag("Box"))
             {
+                Debug.Log("Box was hit by ray");
+
                 if (Input.GetButtonDown("Jump"))
                 {
                     PickUpBox(go.transform);
@@ -39,6 +41,7 @@ public class Interact : MonoBehaviour
             }
             else if (go.CompareTag("Button"))
             {
+                Debug.Log("Button was hit by ray");
                 if (Input.GetButtonDown("Jump"))
                 {
                     go.GetComponent<enterButton>().Activate();

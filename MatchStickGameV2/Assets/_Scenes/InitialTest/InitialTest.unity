@@ -28006,7 +28006,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29336
+  m_Name: pb_Mesh32230
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -62121,6 +62121,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945c20413c12ee24bbfffbd46437707a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventOn:
+    m_PersistentCalls:
+      m_Calls: []
+  eventOff:
+    m_PersistentCalls:
+      m_Calls: []
+  anim: {fileID: 0}
+  currentState: 0
 --- !u!1 &1615950749514837519
 GameObject:
   m_ObjectHideFlags: 0
@@ -64089,17 +64097,17 @@ PrefabInstance:
     - target: {fileID: 8586404486544217534, guid: 99786bffd0193df459889aabbd4c50e6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8586404486544217534, guid: 99786bffd0193df459889aabbd4c50e6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.053
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8586404486544217534, guid: 99786bffd0193df459889aabbd4c50e6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.926
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8586404486544217534, guid: 99786bffd0193df459889aabbd4c50e6,
         type: 3}
@@ -64449,7 +64457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6544176116395672518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.02, z: 0.162}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.52401, y: 0.52401, z: 0.52401}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -64465,7 +64473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6544279432209714346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.69, y: 0, z: 0}
+  m_LocalPosition: {x: 4.69, y: -0.56, z: -13.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -64657,11 +64665,6 @@ MonoBehaviour:
   rayPoint: {fileID: 1320265504}
   currentBox: {fileID: 0}
   controller: {fileID: 6578799343132775898}
-  playerRigidbody: {fileID: 6490999633815312606}
-  queue:
-    m_PersistentCalls:
-      m_Calls: []
-  hitbox: 0
 --- !u!81 &6626149488871553576
 AudioListener:
   m_ObjectHideFlags: 0
@@ -64781,6 +64784,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945c20413c12ee24bbfffbd46437707a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventOn:
+    m_PersistentCalls:
+      m_Calls: []
+  eventOff:
+    m_PersistentCalls:
+      m_Calls: []
+  anim: {fileID: 0}
+  currentState: 0
 --- !u!4 &8304146295444520515
 Transform:
   m_ObjectHideFlags: 0

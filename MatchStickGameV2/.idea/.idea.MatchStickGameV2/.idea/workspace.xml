@@ -21,9 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="86c2c141-be0e-42a2-a30a-ba1f992a2223" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchStickGameV2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/!scripts/PressurePlate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/PressurePlate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!scripts/Interact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/Interact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!scripts/TorchState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/TorchState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!scripts/enterButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!scripts/enterButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2DArt/Miscellaneous/news_61e154d17fbc8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2DArt/Miscellaneous/news_61e154d17fbc8.jpeg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets 01.02.22/ResourcesData/Sprites/Component/Button/btn_rectangle_01_n_blue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets 01.02.22/ResourcesData/Sprites/Component/Button/btn_rectangle_01_n_blue.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/BoxToPush.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/BoxToPush.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/ButtonStand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/ButtonStand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/FirePlaceWithFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/FirePlaceWithFire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Character + camera placement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Character + camera placement.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/InitialTest/InitialTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/InitialTest/InitialTest.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,15 +80,15 @@
         <option value="$PROJECT_DIR$/Assembly-CSharp.csproj" />
         <option value="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" />
         <option value="$PROJECT_DIR$/obj/project.assets.json" />
-        <option value="$PROJECT_DIR$/Assets/!scripts/IgniteFireAbove.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/drag.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/PauseGame.cs" />
-        <option value="$PROJECT_DIR$/Assets/!scripts/TorchState.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/Fire.cs" />
-        <option value="$PROJECT_DIR$/Assets/!scripts/Interact.cs" />
-        <option value="$PROJECT_DIR$/Assets/!scripts/enterButton.cs" />
         <option value="$PROJECT_DIR$/Assets/!scripts/PressurePlate.cs" />
+        <option value="$PROJECT_DIR$/Assets/!scripts/IgniteFireAbove.cs" />
+        <option value="$PROJECT_DIR$/Assets/!scripts/Interact.cs" />
+        <option value="$PROJECT_DIR$/Assets/!scripts/TorchState.cs" />
+        <option value="$PROJECT_DIR$/Assets/!scripts/enterButton.cs" />
       </list>
     </option>
   </component>
@@ -146,6 +153,7 @@
       <workItem from="1644171683147" duration="2232000" />
       <workItem from="1644249536656" duration="364000" />
       <workItem from="1644250327153" duration="10990000" />
+      <workItem from="1644327010473" duration="8300000" />
     </task>
     <servers />
   </component>

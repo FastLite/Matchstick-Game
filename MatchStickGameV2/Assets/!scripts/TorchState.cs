@@ -34,7 +34,6 @@ public class TorchState : MonoBehaviour
             if (Physics.Raycast(raycastPoint.position, raycastPoint.TransformDirection(Vector3.forward), out hit, .5f) )
             {
                 GameObject go = hit.collider.gameObject;
-                Debug.Log(go);
                 if (Input.GetButton("Jump"))
                 {
                     if (go.CompareTag("FirePlace"))
