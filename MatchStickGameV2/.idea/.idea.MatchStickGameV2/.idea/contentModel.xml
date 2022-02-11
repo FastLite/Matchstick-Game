@@ -19,6 +19,7 @@
             <e p="AudioManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
           </e>
+          <e p="MoveCameraToNextLevel.cs" t="Include" />
           <e p="PauseGame.cs" t="Include" />
           <e p="PressurePlate.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
@@ -28,26 +29,6 @@
         <e p="_Taurean Folder" t="Include">
           <e p="Scripts" t="Include">
             <e p="UI_Controller.cs" t="Include" />
-          </e>
-        </e>
-        <e p="AssetStoreOriginals" t="Include">
-          <e p="_SNAPS_PrototypingAssets" t="Include">
-            <e p="About" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="ReadmeEditor.cs" t="Include" />
-                </e>
-                <e p="Readme.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Scripts" t="Include">
-              <e p="Editor" t="Include">
-                <e p="PackageChecker" t="Include">
-                  <e p="PackageChecker.cs" t="Include" />
-                  <e p="PackageImportList.txt" t="Include" />
-                </e>
-              </e>
-            </e>
           </e>
         </e>
         <e p="Character Movement Fundamentals" t="Include">
