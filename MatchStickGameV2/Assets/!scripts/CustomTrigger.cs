@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class CustomTrigger : MonoBehaviour
 {
   
-    public GameObject myObject;
     private bool didPlay;
     public UnityEvent myEvent;
     public int delay;
@@ -25,7 +24,6 @@ public class CustomTrigger : MonoBehaviour
         didPlay = true;
         if (myEvent.GetPersistentEventCount()>0)
         {
-            Debug.Log(myEvent.GetPersistentEventCount());
             Invoke(nameof(DoEvent), delay);
         }
     }
