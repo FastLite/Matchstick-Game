@@ -12,7 +12,6 @@ public class PauseGame : MonoBehaviour
     public  AudioListener playerListener;
     private void Start()
     {
-        
         Time.timeScale = 1;
     }
 

@@ -4,37 +4,24 @@ using UnityEngine;
 
 public class SimonSays : MonoBehaviour
 {
-    [SerializeField]
-    private bool active;
 
-    private GameObject button;
+    public Renderer rend;
+    private Color firstColor = Color.white;
+    private Color secondColor = Color.green;
 
-    private Renderer buttonRenderer;
-
-    private Color newButtonColor;
-
-    private float colorOne, colorTwo;
-
-    private AudioSource rightSound;
-
+    public int ThisButtonNumber;
 
     void Start()
     {
-        buttonRenderer = button.GetComponent<Renderer>();
-        gameObject.GetComponent<Button>().onClick.AddListener(ChangeBoxColor);
+        rend = GetComponent<Renderer>();
+        rend.material.color = firstColor;
     }
 
-  
-
-
-
-    public void ChangeBoxColor()
+    public void ChangeColor()
     {
-        colorOne = Random.Range(0f, 1f);
-        colorTwo = Random.Range(0f, 1f);
-
-        newButtonColor = new Color(colorOne, colorTwo, 1f);
-
-        buttonRenderer.material.SetColor("_color", newButtonColor);
+        rend.material.color = new Color(rend.material.color.r, rend.material.color.g, rend.material.color.b, 0f); 
     }
+
+
+
 }

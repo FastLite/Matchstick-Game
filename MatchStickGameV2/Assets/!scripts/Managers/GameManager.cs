@@ -7,10 +7,15 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    //public GameObject endScreen;
     public bool gameIsEnded = false;
-    public Slider sensativity;
     public Slider volume;
+
+    [SerializeField]
+    public Renderer[] boxes;
+    private int boxSelect;
+
+    public float stayLit;
+    private float stayLitCounter;
     
 
     private void Awake()
@@ -35,17 +40,9 @@ public class GameManager : MonoBehaviour
         else
         {
             volume.value = PlayerPrefs.GetFloat("Volume");
-
         }
-        sensativity.value = PlayerPrefs.GetFloat("sensitivity");
     }
 
-   
-    
-    public void ChangeSensitivity(float newValue)
-    {
-        PlayerPrefs.SetFloat("sensitivity", newValue);
-    }
     public void ChangeVolume(float newValue)
     {
         PlayerPrefs.SetFloat("Volume", newValue);
@@ -53,7 +50,36 @@ public class GameManager : MonoBehaviour
     public void saveMuteState(int muted)
     {
         PlayerPrefs.SetInt("MuteState",muted);
-
     }
+
+    void Update()
+    {
+        
+    }
+
+
+    public void StartSSGame()
+    {
+        boxSelect = UnityEngine.Random.Range(0, boxes.Length);
+
+        boxes[boxSelect].material.color = new Color(boxes[boxSelect].material.color.r, boxes[boxSelect].material.color.b, boxes[boxSelect].material.color.g, 1f);
+
+        stayLitCounter = stayLit;
+
+        if (stayLitCounter > 1)
+        {
+            stayLitCounter -= Time.deltaTime;
+        }
+        else
+        {
+            boxes[boxSelect].material.color = new Color(boxes[boxSelect].material.color.r, boxes[boxSelect].material.color.b, boxes[boxSelect].material.color.g, 0.5f);
+        }
+    }
+
+    public void ColorPressed(int whichButton)
+    {
+        //if()
+    }
+
 
 }
