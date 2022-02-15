@@ -12,10 +12,18 @@ public class Interact : MonoBehaviour
     public Transform currentBox;
     public AdvancedWalkerController controller;
     private TurnTowardControllerVelocity TTCV;
+    private UIManager ui;
 
     private void Awake()
     {
         TTCV = GetComponentInChildren<TurnTowardControllerVelocity>();
+        
+    }
+
+    private void Start()
+    {
+        ui =UIManager.instance;
+        
     }
 
     void Update()
@@ -38,6 +46,9 @@ public class Interact : MonoBehaviour
                 {
                     ReleaseBox();
                 }
+
+                ui.ShowTip();
+
             }
             else if (go.CompareTag("Button"))
             {
@@ -46,8 +57,17 @@ public class Interact : MonoBehaviour
                 {
                     go.GetComponent<enterButton>().Activate();
                 }
+                ui.ShowTip();
+            }
+            else
+            {
+                ui.HideTip();
             }
             
+        }
+        else
+        {
+            ui.HideTip();
         }
     }
 

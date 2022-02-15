@@ -1,18 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource btnClick;
+    public SoundCollectionSO sc;
+    public static AudioManager instance;
 
-    void Start()
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad (gameObject); 
     }
-
-    public void ButtonSound()
+    public void playAudioClip(AudioSource audioSource, AudioClip clip)
     {
-        btnClick.Play();
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

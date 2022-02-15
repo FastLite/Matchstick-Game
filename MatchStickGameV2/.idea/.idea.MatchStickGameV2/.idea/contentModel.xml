@@ -6,8 +6,9 @@
     <e p="F:\Matchstick Game\MatchStickGameV2" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="!Scripts" t="Include">
+        <e p="!scripts" t="Include">
           <e p="Counter.cs" t="Include" />
           <e p="CustomTrigger.cs" t="Include" />
           <e p="enterButton.cs" t="Include" />
@@ -18,16 +19,25 @@
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
+            <e p="SettingsManager.cs" t="Include" />
+            <e p="UIManager.cs" t="Include" />
           </e>
           <e p="MoveCameraToNextLevel.cs" t="Include" />
           <e p="PauseGame.cs" t="Include" />
           <e p="PressurePlate.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
+          <e p="ScriptebleObjects" t="Include">
+            <e p="NewPlayableBehaviour.cs" t="Include" />
+            <e p="SettingsSO.cs" t="Include" />
+            <e p="SoundCollectionSO.cs" t="Include" />
+          </e>
           <e p="SettingsMenu.cs" t="Include" />
           <e p="TorchState.cs" t="Include" />
         </e>
         <e p="_Taurean Folder" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Door_Btns.cs" t="Include" />
+            <e p="SimonSays.cs" t="Include" />
             <e p="UI_Controller.cs" t="Include" />
           </e>
         </e>
@@ -108,7 +118,7 @@
             </e>
           </e>
         </e>
-        <e p="Imported Assets 01.02.22" t="Include">
+        <e p="Imported UI elements" t="Include">
           <e p="Extensions" t="Include">
             <e p="UIParticle" t="Include">
               <e p="UIAdditive.shader" t="Include" />
@@ -120,6 +130,7 @@
             <e p="PanelFantasyRPG.cs" t="Include" />
           </e>
         </e>
+        <e p="settings.json" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -155,7 +166,7 @@
       </e>
       <e p="MatchStickGameV2.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="Packages" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
   </component>

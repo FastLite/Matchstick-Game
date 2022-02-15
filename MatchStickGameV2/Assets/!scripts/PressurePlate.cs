@@ -9,6 +9,7 @@ public class PressurePlate : MonoBehaviour
 {
     public UnityEvent onAction;
     public UnityEvent offAction;
+    public Renderer rend;
     [SerializeField]private bool oneTime;
     [SerializeField]private bool wasOn;
 
@@ -39,5 +40,6 @@ public class PressurePlate : MonoBehaviour
             }
         }
     }
+
     
 }

@@ -31,6 +31,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadSceneByName(string scenename)
     {
+        if(scenename == null)
+            return;
         SceneManager.LoadScene(scenename);
     }
 

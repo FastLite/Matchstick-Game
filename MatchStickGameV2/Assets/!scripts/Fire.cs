@@ -18,10 +18,11 @@ public class Fire : MonoBehaviour
 
      public void InteractWithFire(GameObject o)
      {
+         var gp = o.GetComponent<TorchState>().state;
          switch (objectType)
          {
-             /*case FireSourceType.Torch:
-                 if (o.GetComponent<TorchState>().state == TorchState.MyEnum.WithTorch)
+             case FireSourceType.Torch:
+                 if (gp == TorchState.MyEnum.WithTorch)
                  {
                      
                  }
@@ -29,18 +30,16 @@ public class Fire : MonoBehaviour
                  {
                      gameObject.transform.parent = o.transform;
                  }
-                 break;*/
+                 break;
              case FireSourceType.FirePlace:
-                 if (o.GetComponent<TorchState>().state == TorchState.MyEnum.WithTorch)
+                 if (gp == TorchState.MyEnum.WithTorch)
                  {
                      
                      lit = true;
                      fire.SetActive(true);
                  }
                  break;
-                 //Check for torch
              case FireSourceType.Rope:
-                 //check for fire
                  if (lit )
                  {
                      

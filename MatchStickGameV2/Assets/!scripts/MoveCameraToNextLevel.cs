@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MoveCameraToNextLevel : MonoBehaviour
 {
-    [SerializeField]private float x, y, z;
-    public void MoveCamera()
+    [SerializeField] private float x, y, z;
+
+    public virtual void Move()
     {
         var position = transform.position;
-        position = new Vector3(position.x+x, position.y+y, position.z+z );
+        position = new Vector3(position.x + x, position.y + y, position.z + z);
         transform.position = position;
     }
 
@@ -16,12 +17,15 @@ public class MoveCameraToNextLevel : MonoBehaviour
     {
         x = newX;
     }
+
     public void UpdateY(float newY)
     {
         y = newY;
     }
+
     public void UpdateZ(float newZ)
     {
         z = newZ;
+
     }
 }
