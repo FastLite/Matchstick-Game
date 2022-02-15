@@ -29,6 +29,15 @@ public class enterButton : MonoBehaviour
         FindObjectOfType<Counter>().UpdateCount();
     }
 
+    public void StartSimonSaysGame()
+    {
+        FindObjectOfType<GameManager>().StartSSGame();
+    }
+    public void ChangeColor()
+    {
+        FindObjectOfType<SimonSays>().ChangeColor();
+    }
+
     public void debug()
     {
         Debug.Log("EventStarted");

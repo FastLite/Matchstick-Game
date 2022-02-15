@@ -1,4 +1,4 @@
-using System;
+    using System;
 using System.Collections;
 using System.Collections.Generic;
 using CMF;
@@ -63,7 +63,23 @@ public class Interact : MonoBehaviour
             {
                 ui.HideTip();
             }
-            
+            else if (go.CompareTag("SSButton"))
+            {
+                Debug.Log("Simon Says Box was hit by ray");
+
+                if(Input.GetButtonDown("Jump"))
+                {
+                    go.GetComponent<enterButton>().StartSimonSaysGame();
+                }
+            }
+            else if (go.CompareTag("SSBoxes"))
+            {
+                Debug.Log("Box has been selected");
+                if (Input.GetButtonDown("Jump"))
+                {
+                    go.GetComponent<enterButton>().ChangeColor();
+                }
+            }
         }
         else
         {
@@ -99,4 +115,5 @@ public class Interact : MonoBehaviour
         currentBox.parent = null;
         currentBox = null;
     }
+
 }
