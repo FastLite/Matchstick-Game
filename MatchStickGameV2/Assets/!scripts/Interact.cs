@@ -1,4 +1,4 @@
-    using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using CMF;
@@ -59,10 +59,6 @@ public class Interact : MonoBehaviour
                 }
                 ui.ShowTip();
             }
-            else
-            {
-                ui.HideTip();
-            }
             else if (go.CompareTag("SSButton"))
             {
                 Debug.Log("Simon Says Box was hit by ray");
@@ -79,6 +75,10 @@ public class Interact : MonoBehaviour
                 {
                     go.GetComponent<enterButton>().ChangeColor();
                 }
+            }
+            else
+            {
+                ui.HideTip();
             }
         }
         else

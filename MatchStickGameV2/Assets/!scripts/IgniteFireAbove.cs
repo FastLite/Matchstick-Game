@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class IgniteFireAbove : MonoBehaviour
-{    [SerializeField]
-     GameObject torch;
+{    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("FirePlace"))
-        {
-            other.GetComponent<Fire>().InteractWithFire(torch);
-        }
+        if (!other.CompareTag("FirePlace"))
+            return;
+        other.GetComponent<Fire>().InteractWithFire();
+        
     }
 }
