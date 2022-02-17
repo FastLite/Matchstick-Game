@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,43 +9,29 @@ public class Fire : MonoBehaviour
     //This script is placed on all the objects that can burn 
     protected enum FireSourceType
     {
-        Torch, FirePlace, Rope 
+         FirePlace, Rope 
     }
-    public GameObject fire;
-     private bool lit;
+    [SerializeField] private bool lit;
      public GameObject fireVFX;
 
      [SerializeField] protected FireSourceType objectType;
+     [SerializeField] private float radius;
+     [SerializeField] private float delay = 1;
 
-     
-     
-     public void InteractWithFire(GameObject gm)
+
+    
+
+     public void InteractWithFire()
      {
-         // gm - is object that transfers the fire
-         // gp - short local variable to get the other object fire state
-         var gp = gm.GetComponent<TorchState>().state;
+         if (lit)
+            return;
          switch (objectType)
          {
-             case FireSourceType.Torch:
-                 if (gp == TorchState.MyEnum.WithTorch)
-                 {
-                 }
-                 else
-                 {
-                     gameObject.transform.parent = gm.transform;
-                 }
-                 break;
              case FireSourceType.FirePlace:
-                 if (gp == TorchState.MyEnum.WithTorch)
-                 {
-                     lit = true;
-                     fire.SetActive(true);
-                 }
-
-                 lightUpAndTransfer();
+                 LightUpAndTransfer();
                  break;
              case FireSourceType.Rope:
-                 lightUpAndTransfer();
+                 LightUpAndTransfer();
                  break;
                  
          }
@@ -52,27 +39,35 @@ public class Fire : MonoBehaviour
 
      public void InteractWithFire(bool bypass)
      {
-         if(false)
+         if(!bypass)
              return;
-         
-     
+         LightUpAndTransfer();
      }
 
      void TransferFire()
      {
-         var aray = Physics.OverlapSphere(transform.position, 1, 1, QueryTriggerInteraction.UseGlobal);
+          
+         LayerMask mask = LayerMask.GetMask("Ignitable");
+         var aray = Physics.OverlapSphere(transform.position, radius, mask, QueryTriggerInteraction.UseGlobal);
          foreach (var obj in aray)
          {
              var fi = obj.gameObject.GetComponent<Fire>();
-             if (fi.lit)
-                return;
-             InteractWithFire(obj.gameObject);
+             if (!fi.lit)
+                 fi.InteractWithFire();
+
          }
      }
-
-     void lightUpAndTransfer()
+     [ContextMenu("transferfire debug")]
+     void LightUpAndTransfer()
      {
+         fireVFX.SetActive(true);
          lit = true;
-         TransferFire();
+         Invoke(nameof(TransferFire), delay);
+     }
+
+     private void OnDrawGizmos()
+     {
+         Gizmos.color = Color.red;
+         Gizmos.DrawWireSphere(transform.position, radius);
      }
 }

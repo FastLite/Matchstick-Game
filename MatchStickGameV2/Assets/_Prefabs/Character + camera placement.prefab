@@ -25,13 +25,13 @@ Transform:
   m_GameObject: {fileID: 2591921961793497772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75419766, y: 0.75419766, z: 0.75419766}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8021180265250404023}
   - {fileID: 8020389058209124623}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8017587640753924241
 GameObject:
@@ -115,7 +115,6 @@ GameObject:
   - component: {fileID: 8034967269218393213}
   - component: {fileID: 7987642782127165817}
   - component: {fileID: 7986759093693165699}
-  - component: {fileID: 5262469524599838195}
   - component: {fileID: 266378459}
   m_Layer: 0
   m_Name: TopDownWalker
@@ -151,9 +150,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.385
-  m_Height: 1.9668001
+  m_Height: 1.7
   m_Direction: 1
-  m_Center: {x: 0, y: 0.4686, z: 0}
+  m_Center: {x: 0, y: 0.56100005, z: 0}
 --- !u!114 &7986671657020241233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,10 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98ace8715c2a184ca85247b18eb0853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepHeightRatio: 0.106
-  colliderHeight: 2.2
+  stepHeightRatio: 0
+  colliderHeight: 1.7
   colliderThickness: 0.77
-  colliderOffset: {x: 0, y: 0.16, z: 0}
+  colliderOffset: {x: 0, y: 0.33, z: 0}
   sensorType: 0
   isInDebugMode: 0
   sensorArrayRows: 1
@@ -210,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f5e44db14072ea4c964da3b192181c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 5
   airControlRate: 100
   jumpSpeed: 5
   jumpDuration: 0.1
@@ -239,20 +238,6 @@ MonoBehaviour:
   verticalInputAxis: Vertical
   jumpKey: 293
   useRawInput: 0
---- !u!114 &5262469524599838195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8017720805475928073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d2c291bb96078469a88245f2f17480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  torchGO: {fileID: 8237063728087634495}
-  state: 1
 --- !u!114 &266378459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +254,8 @@ MonoBehaviour:
   rayPoint: {fileID: 8237063728059459946}
   currentBox: {fileID: 0}
   controller: {fileID: 7987642782127165817}
+  state: 1
+  torchGO: {fileID: 8237063728087634495}
 --- !u!1 &8017758013341009765
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,15 +389,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8018587575279436713}
-  m_LocalRotation: {x: -0.08712942, y: -0.7084617, z: -0.0888566, w: 0.6946907}
-  m_LocalPosition: {x: 19, y: 15, z: 10}
+  m_LocalRotation: {x: -0.070720896, y: -0.70356137, z: -0.070720896, w: 0.70356137}
+  m_LocalPosition: {x: 19.72, y: 15, z: 13.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8021125833917826351}
   m_Father: {fileID: 5092191159455791840}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -14.298, y: -91.125, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.48, y: -90, z: 0}
 --- !u!114 &7986920118756894987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb9301923cc0e6449ba1060019a14e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
 --- !u!1 &8018625850342786237
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,4 +733,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc17943cd71893649b0fc09e8d095c5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torch: {fileID: 8237063728087634495}

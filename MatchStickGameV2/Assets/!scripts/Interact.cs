@@ -7,12 +7,22 @@ using UnityEngine.Events;
 
 public class Interact : MonoBehaviour
 {
+    public enum MyEnum
+    {
+        WithTorch,Without
+    }
+    
     public Transform playerParent;
     public Transform rayPoint;
     public Transform currentBox;
     public AdvancedWalkerController controller;
     private TurnTowardControllerVelocity TTCV;
     private UIManager ui;
+    
+    [Header("Torch")]
+    public MyEnum state;
+    public GameObject torchGO;
+
 
     private void Awake()
     {
@@ -33,58 +43,53 @@ public class Interact : MonoBehaviour
         if (Physics.Raycast(rayPoint.position, rayPoint.TransformDirection(Vector3.forward), out hit, .5f ))
         {
             GameObject go = hit.collider.gameObject;
-            if (go.CompareTag("Box"))
-            {
-                Debug.Log("Box was hit by ray");
 
-                if (Input.GetButtonDown("Jump"))
-                {
-                    PickUpBox(go.transform);
-                }
-
-                if (Input.GetButtonUp("Jump"))
-                {
-                    ReleaseBox();
-                }
-
-                ui.ShowTip();
-
-            }
-            else if (go.CompareTag("Button"))
+            var tag = go.tag;
+            switch (tag)
             {
-                Debug.Log("Button was hit by ray");
-                if (Input.GetButtonDown("Jump"))
-                {
-                    go.GetComponent<enterButton>().Activate();
-                }
-                ui.ShowTip();
-            }
-            else if (go.CompareTag("SSButton"))
-            {
-                Debug.Log("Simon Says Box was hit by ray");
-
-                if(Input.GetButtonDown("Jump"))
-                {
-                    go.GetComponent<enterButton>().StartSimonSaysGame();
-                }
-            }
-            else if (go.CompareTag("SSBoxes"))
-            {
-                Debug.Log("Box has been selected");
-                if (Input.GetButtonDown("Jump"))
-                {
-                    go.GetComponent<enterButton>().ChangeColor();
-                }
-            }
-            else
-            {
-                ui.HideTip();
+                default:
+                    ui.HideTip();
+                    break;
+                case "Box":
+                    ui.ShowTip();
+                    if (Input.GetButtonDown("Jump"))
+                        PickUpBox(go.transform);
+                    if (Input.GetButtonUp("Jump"))
+                        ReleaseBox();
+                    break;
+                
+                case "Button":
+                    ui.ShowTip();
+                    if (Input.GetButtonDown("Jump"))
+                        go.GetComponent<enterButton>().Activate();
+                    break;
+                
+                case "TorchPile":
+                    ui.ShowTip();
+                    if(Input.GetButtonDown("Jump"))
+                        GrabTorch();
+                    break;
+                
+                case "SSButton":
+                    if(Input.GetButtonDown("Jump"))
+                        go.GetComponent<enterButton>().StartSimonSaysGame();
+                    break;
+                
+                case "SSBoxes":
+                    if (Input.GetButtonDown("Jump"))
+                        go.GetComponent<enterButton>().ChangeColor();
+                    break;
+                
+                case "FirePlace":
+                    ui.ShowTip();
+                    if (state == MyEnum.Without)
+                     return;
+                    if (Input.GetButtonDown("Jump"))
+                        go.GetComponent<Fire>().InteractWithFire();
+                    break;
             }
         }
-        else
-        {
-            ui.HideTip();
-        }
+        
     }
 
     void PickUpBox(Transform box)
@@ -114,6 +119,16 @@ public class Interact : MonoBehaviour
         controller.ignoreVertical = false;
         currentBox.parent = null;
         currentBox = null;
+    }
+
+    void GrabTorch()
+    {
+        if (state == MyEnum.WithTorch)
+            return;
+        state = MyEnum.WithTorch;
+        torchGO.SetActive(true);
+        torchGO.GetComponent<IgniteFireAbove>().enabled = true;
+
     }
 
 }
