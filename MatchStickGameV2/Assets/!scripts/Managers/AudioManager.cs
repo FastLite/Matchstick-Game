@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public SoundCollectionSO sc;
     public static AudioManager instance;
+    public AudioMixer masterMixer;
 
 
     private void Awake()
@@ -25,5 +26,10 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.clip = clip;
         audioSource.Play();
+    }
+    
+    public void  VolumeUpdate(string varName, float value)
+    {
+        masterMixer.SetFloat(varName, value);
     }
 }

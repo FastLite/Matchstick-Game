@@ -11,23 +11,23 @@ public class Interact : MonoBehaviour
         Without
     }
 
-    [Header("General")] [SerializeField]
+    [Header("General")] 
+    [SerializeField]
     private AdvancedWalkerController
         controller; //We need this reference to restrict axis movement while dragging or pushing
-
     private UIManager ui; //Referemce to the ui manager to use methods declared there
 
-    [Header("Raycast")] public Transform rayPoint; //From where ray is being cast forward
-
-    private TurnTowardControllerVelocity
-        TTCV; //Reference to the controller that is responsible for turning player model
-
+    [Header("Raycast")] 
+    public Transform rayPoint; //From where ray is being cast forward
+    private TurnTowardControllerVelocity TTCV; //Reference to the controller that is responsible for turning player model
     [SerializeField] private float rayDistance = .5f; //pretty  self explanatory 
 
-    [Header("Dragging")] public Transform playerParent; //Object which will be the parent of the box and drag it along
+    [Header("Dragging")] 
+    public Transform playerParent; //Object which will be the parent of the box and drag it along
     private Transform currentBox; //Reference to the box to attach and detach the correct box
 
-    [Header("Torch")] public MyEnum state;
+    [Header("Torch")] 
+    public MyEnum state;
     public GameObject torchGO; //torch gameobject, for visual representation and FireAbove check
 
 

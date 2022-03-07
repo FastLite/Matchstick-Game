@@ -114,7 +114,7 @@ MonoBehaviour:
   lit: 0
   fireVFX: {fileID: 5219988007934875949}
   objectType: 1
-  radius: 1.1
+  radius: 0.77
   delay: 1
 --- !u!1001 &713865660416537778
 PrefabInstance:

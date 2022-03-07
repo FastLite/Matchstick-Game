@@ -20,7 +20,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MainGameMusic
+  m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 0d1275be6bdc3c14f93372d5fc0b6740
   m_Children: []
@@ -29,7 +29,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -8778286385723766541}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 1
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -39,7 +39,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ButtonClick
+  m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: b182dce882238ef4a95997f20edeae82
   m_Children: []
@@ -48,7 +48,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 9057696579521932472}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 2
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -68,8 +68,12 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: d7743d87fe0e09240876d35109508d9a
+    name: soundVolume
+  - guid: ba7ce1d6e27a4c84ab0c5ee2f443e295
+    name: musicVolume
   - guid: c4e58f1c561c26e488cf8bb79e525944
-    name: volume
+    name: master
   m_AudioMixerGroupViews:
   - guids:
     - cc549da56159c344795d4da0b152b61c
@@ -123,7 +127,8 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: b774b7072257ac4499c314af65d9d453
   m_FloatValues:
-    d7743d87fe0e09240876d35109508d9a: -23.43374
+    ba7ce1d6e27a4c84ab0c5ee2f443e295: 0
+    d7743d87fe0e09240876d35109508d9a: -9.332115
     c4e58f1c561c26e488cf8bb79e525944: 0
   m_TransitionOverrides: {}
 --- !u!244 &9057696579521932472
