@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/InitialTest/InitialTest.unity
     guid: b0826dce7245afb44949ec84c0c032aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/InitialTest/Taurean_TestScene.unity
     guid: c714a9396aa76074caed2aed6764b191
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/InitialTest/VladLevels.unity
     guid: cd5d21476f9b9ad4ead9728cef9c1526
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/InitialTest/VladLevels3rdPerson.unity
     guid: 81730c8967ba57348aa24738a9fdf323
   m_configObjects:

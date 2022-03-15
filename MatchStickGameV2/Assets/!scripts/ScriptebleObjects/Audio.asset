@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6469e13b69d9fb14ba2d6f3566249020, type: 3}
   m_Name: Audio
   m_EditorClassIdentifier: 
-  area1Music: []
+  area1Music:
+  - {fileID: 8300000, guid: 1a3aa378ec9835e4e90d9c0802003173, type: 3}
   area2Music: []
   area3Music: []
   area4Music: []
-  stepSounds: []
-  UIClick: {fileID: 0}
-  buttonPositive: {fileID: 0}
-  buttonNegative: {fileID: 0}
-  pressurePlate: {fileID: 0}
-  fireOn: {fileID: 0}
-  fireOff: {fileID: 0}
-  doorOpen: {fileID: 0}
+  stepSounds:
+  - {fileID: 8300000, guid: 7341ba07f02fa6941b16a463ddd73f99, type: 3}
+  - {fileID: 8300000, guid: 3efdd4c11a4bdc54a9087ab115c1de9e, type: 3}
+  UIClick: {fileID: 8300000, guid: e8b44c490f1fff44a9a9d959e1ad0d89, type: 3}
+  buttonPositive: {fileID: 8300000, guid: 0823989b2a5e1334c961c6d491e4d42e, type: 3}
+  buttonNegative: {fileID: 8300000, guid: 0cf841629c36e714b89c795264a5bf2e, type: 3}
+  pressurePlate: {fileID: 8300000, guid: 209f5ecb25b00d845bac7aa7c4208d6c, type: 3}
+  fireOn: {fileID: 8300000, guid: c4b6eea6cd130344bb0c39f8a34b415b, type: 3}
+  fireOff: {fileID: 8300000, guid: 99ab8a4503de1f448ad764a5c4cdf9cc, type: 3}
+  doorOpen: {fileID: 8300000, guid: fa47b88763d72a6498bb3ac62e566f7c, type: 3}

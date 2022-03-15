@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    public bool gameIsEnded = false;
     public Slider volume;
 
     [SerializeField]
@@ -30,35 +29,8 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad (gameObject); 
     }
-
-    private void Start()
-    {
-        if (PlayerPrefs.GetFloat("Volume") <0.1)
-        {
-            volume.value = 0.8f;
-        }
-        else
-        {
-            volume.value = PlayerPrefs.GetFloat("Volume");
-        }
-    }
-
-    public void ChangeVolume(float newValue)
-    {
-        PlayerPrefs.SetFloat("Volume", newValue);
-    }
-    public void saveMuteState(int muted)
-    {
-        PlayerPrefs.SetInt("MuteState",muted);
-    }
-
-    void Update()
-    {
-        
-    }
-
-
-    public void StartSSGame()
+    
+    public void StartSSGame()//TODO move this function to another script, it doesn't belong here
     {
         boxSelect = UnityEngine.Random.Range(0, boxes.Length);
 

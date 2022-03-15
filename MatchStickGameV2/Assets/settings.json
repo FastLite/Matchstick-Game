@@ -1,6 +1,6 @@
 {
-    "globalVolume": 100.0,
-    "musicVolume": 100.0,
-    "soundVolume": 100.0,
+    "globalVolume": 0.0,
+    "musicVolume": 0.0,
+    "soundVolume": 0.0,
     "muteState": false
 }

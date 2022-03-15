@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-9050953689408211390
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: b46b42a2509231c49bdbf4d09fe8f236
+  m_EffectName: Normalize
+  m_MixLevel: 5875320344cabf348b8d71c20656b197
+  m_Parameters:
+  - m_ParameterName: Fade in time
+    m_GUID: f044a6c6bd815a04db45d0a1db5ba4d1
+  - m_ParameterName: Lowest volume
+    m_GUID: a4afa64707e7226469b9dec3e04f4c05
+  - m_ParameterName: Maximum amp
+    m_GUID: eecdf46eb3b76d9428481a6f26a9fb90
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-8778286385723766541
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -73,7 +93,7 @@ AudioMixerController:
   - guid: ba7ce1d6e27a4c84ab0c5ee2f443e295
     name: musicVolume
   - guid: c4e58f1c561c26e488cf8bb79e525944
-    name: master
+    name: masterVolume
   m_AudioMixerGroupViews:
   - guids:
     - cc549da56159c344795d4da0b152b61c
@@ -99,7 +119,8 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
-  m_UserColorIndex: 0
+  - {fileID: -9050953689408211390}
+  m_UserColorIndex: 3
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -127,9 +148,16 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: b774b7072257ac4499c314af65d9d453
   m_FloatValues:
-    ba7ce1d6e27a4c84ab0c5ee2f443e295: 0
+    0c6702d2832fa354b969d048a27cd489: 3944
+    3c2ca9634796dfc49a2ac747e74672b3: 5
+    ac33240416302f54dac9f259f34d1c0d: 0.629
+    ba7ce1d6e27a4c84ab0c5ee2f443e295: -0.16685188
+    afc92f1783a59aa40b82e1026c02b740: 0.357
+    a4afa64707e7226469b9dec3e04f4c05: 0.054
     d7743d87fe0e09240876d35109508d9a: -9.332115
-    c4e58f1c561c26e488cf8bb79e525944: 0
+    cec5ad8a9a49ad948bdde034b54bb981: 4819
+    c4e58f1c561c26e488cf8bb79e525944: 0.46274877
+    eecdf46eb3b76d9428481a6f26a9fb90: 10
   m_TransitionOverrides: {}
 --- !u!244 &9057696579521932472
 AudioMixerEffectController:
