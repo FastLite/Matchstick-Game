@@ -4,26 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/_Scenes/MainMenu.unity
-    guid: 29c7e63d0ea672248b415ca2b9c4e329
-  - enabled: 0
-    path: Assets/_Scenes/InitialTest/InitialTest.unity
-    guid: b0826dce7245afb44949ec84c0c032aa
-  - enabled: 0
-    path: Assets/_Scenes/InitialTest/Taurean_TestScene.unity
-    guid: c714a9396aa76074caed2aed6764b191
-  - enabled: 0
-    path: Assets/_Scenes/InitialTest/VladLevels.unity
-    guid: cd5d21476f9b9ad4ead9728cef9c1526
-  - enabled: 0
-    path: Assets/_Scenes/InitialTest/VladLevels3rdPerson.unity
-    guid: 81730c8967ba57348aa24738a9fdf323
-  m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: dc210c8fe801f9643b29f1da4beac276,
-      type: 2}
-    com.unity.input.settings: {fileID: 11400000, guid: 3bdd64aa499693848b7c89b83800541c,
-      type: 2}
-    com.unity.localization.settings: {fileID: 11400000, guid: 6893828546de0ca44a1bd5839f4140c4,
-      type: 2}
+  m_Scenes: []
+  m_configObjects: {}
