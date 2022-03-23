@@ -4928,8 +4928,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4f10898a320e34aa3ac989bc25d225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 133617080}
+  lit: 0
+  fireVFX: {fileID: 0}
   objectType: 1
+  radius: 0
+  delay: 1
 --- !u!65 &1447587286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5939,6 +5942,9 @@ MonoBehaviour:
       m_Calls: []
   anim: {fileID: 0}
   currentState: 0
+  didplay: 0
+  offDelay: 0
+  onDelay: 0
 --- !u!4 &1481119066034928768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8662466634245276962, guid: 11c98c02925c37545ac0110c488e7469,
@@ -8015,10 +8021,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b13ac5712d36694abd42f25961a055e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerParent: {fileID: 6546923786240825584}
-  rayPoint: {fileID: 1731329300}
-  currentBox: {fileID: 0}
   controller: {fileID: 6578799343132775898}
+  rayPoint: {fileID: 1731329300}
+  rayDistance: 0.5
+  playerParent: {fileID: 6546923786240825584}
+  state: 0
+  torchGO: {fileID: 0}
 --- !u!114 &6578799343132775900
 MonoBehaviour:
   m_ObjectHideFlags: 0

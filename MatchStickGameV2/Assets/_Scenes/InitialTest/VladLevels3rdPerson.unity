@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 622020465}
-  m_IndirectSpecularColor: {r: 0.02766022, g: 0.061309926, b: 0.12275138, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11139,7 +11139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc17943cd71893649b0fc09e8d095c5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torch: {fileID: 1772344539}
 --- !u!1001 &783736959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31460,10 +31459,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b13ac5712d36694abd42f25961a055e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerParent: {fileID: 1913379093}
-  rayPoint: {fileID: 579645375}
-  currentBox: {fileID: 0}
   controller: {fileID: 114954127516263537}
+  rayPoint: {fileID: 579645375}
+  rayDistance: 0.5
+  playerParent: {fileID: 1913379093}
+  state: 0
+  torchGO: {fileID: 0}
 --- !u!114 &136416336057506575
 MonoBehaviour:
   m_ObjectHideFlags: 0
