@@ -18,7 +18,8 @@ public class enterButton : MonoBehaviour
     public UnityEvent eventOff;
     public Animation anim;
 
-    public bool currentState, didplay;
+    public bool currentState { get; set; }
+    public bool didplay;
     [SerializeField] private int offDelay;
     [SerializeField] private int onDelay;
 
@@ -38,22 +39,27 @@ public class enterButton : MonoBehaviour
         FindObjectOfType<SimonSays>().ChangeColor();
     }
 
-    public void debug()
+    public void debug(string message)
     {
-        Debug.Log("EventStarted");
+        Debug.Log(message);
     }
 
     public void Activate()
     {
-        if (anim.isPlaying || delayed || didplay)
+        if (anim != null)
         {
-            Debug.Log("Can't activate button, animation is still playing or events will happen automaticly");
+            if ( anim.isPlaying || delayed || didplay)
+            {
+                debug("Can't activate button, animation is still playing or events will happen automaticly");
+            }
         }
         else
         {
             if (!currentState)
             {
                 Invoke(nameof(DoOnEvent), 0);
+                debug("I am invoking button");
+
                 
             }
             else if (type != ButtonType.OneTime)
@@ -71,8 +77,13 @@ public class enterButton : MonoBehaviour
 
     void DoOnEvent()
     {
+        if (eventOn.GetPersistentEventCount()<=0)
+        {
+            return;
+        }
+        currentState = !currentState;
         eventOn?.Invoke();
-        currentState = !currentState ;
+
         if (offDelay>1)
         {
             delayed = true;
@@ -87,6 +98,10 @@ public class enterButton : MonoBehaviour
     }
     void DoOffEvent()
     {
+        if (eventOff.GetPersistentEventCount()<=0)
+        {
+            return;
+        }
         eventOff?.Invoke();
         currentState = !currentState ;
         if (onDelay>1)

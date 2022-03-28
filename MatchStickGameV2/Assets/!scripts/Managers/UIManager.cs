@@ -29,6 +29,6 @@ public class UIManager : MonoBehaviour
     }
     public void HideTip()
     {
-        UITip.SetActive(false);
+       UITip.SetActive(false);
     }
 }

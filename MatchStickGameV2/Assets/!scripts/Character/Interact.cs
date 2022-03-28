@@ -60,9 +60,12 @@ public class Interact : MonoBehaviour
         {
             //for easier access git gameobject is stored on local variable
             GameObject go = hit.collider.gameObject;
-
             //since we might compare tag later on it is also stored in local variable as a string
             var tag = go.tag;
+            if (go==null)
+            {
+             ReleaseBox();           
+            }
             switch (tag)
             {
                 //if it wasn't interactable hide ui tip just in case
@@ -117,6 +120,7 @@ public class Interact : MonoBehaviour
         {
             //Raycast hit nothing? Hide tip and do nothing
             ui.HideTip();
+            ReleaseBox();
         }
     }
 
@@ -133,7 +137,7 @@ public class Interact : MonoBehaviour
         {
             controller.ignoreHorizontal = true;
         }
-        else if ((y > -1 && y < 2) || (y > 175 && y < 185))
+        else if (y is > -1 and < 2 or > 175 and < 185)
         {
             controller.ignoreVertical = true;
         }

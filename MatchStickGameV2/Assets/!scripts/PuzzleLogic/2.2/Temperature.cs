@@ -12,28 +12,43 @@ public class Temperature : MonoBehaviour
 
     private void Start()
     {
-        text.text = flameValue.ToString();    
         NewText();
     }
 
     public void ChangeValue(int value)
     {
+        
+        if (flameValue==targetValue)
+        {
+            return;
+        }
+        
         flameValue = flameValue + value;
         if (flameValue>400)
         {
             flameValue -= 400;
         }
-        else if (flameValue==targetValue)
-        {
-          Debug.Log("Target temperature achived");
-        }
-
         NewText();
+        if (flameValue==targetValue)
+        {
+            text.color = Color.green;
+            Debug.Log("Target temperature achieved");
+            
+            return;
+        }
+        
+        
     }
-    
+
+    public void ResetTemperature(int defaultTemp)
+    {
+        flameValue = defaultTemp;
+    }
+
     [ContextMenu(nameof(NewText))]public void NewText()
     {
         text.text = flameValue+"°C";
 
     }
 }
+ 
