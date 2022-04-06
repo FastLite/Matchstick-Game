@@ -8,16 +8,16 @@ using UnityEngine.Events;
 public class Equation : MonoBehaviour
 {
     public TextMesh textMesh;
-     enum operation
+     enum operation //states of the controller. Order here is the same order in the actual game and design
     {
         Plus, Minus, Multiply, Done 
     }
 
-     private operation op = operation.Plus;
-    [SerializeField]private newPlate first;
+     private operation op = operation.Plus; //starting operation is always addition
+    [SerializeField]private newPlate first; //Pressure plates in levels
     [SerializeField]private newPlate second;
     [SerializeField]private newPlate third;
-    public UnityEvent doneEvent;
+    public UnityEvent doneEvent; 
     private bool eventInvoked;
     public void Sum()
     {

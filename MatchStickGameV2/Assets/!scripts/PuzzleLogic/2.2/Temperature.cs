@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Temperature : MonoBehaviour
+public class Temperature : MonoBehaviour //SCRIPT I NO LONGER USED in designs (but you still can)
 {
     [SerializeField] private TextMeshPro text;
     [SerializeField]private int flameValue;

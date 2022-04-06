@@ -72,6 +72,7 @@ public class Interact : MonoBehaviour
                 //TODO find where to replace repeated GetButton call
                 default:
                     ui.HideTip();
+                    ReleaseBox();
                     break;
                 case "Box":
                     ui.ShowTip();
@@ -133,28 +134,29 @@ public class Interact : MonoBehaviour
         //check the player facing direction and based on that restrict movement on one of the axis
         int y = Mathf.FloorToInt(playerParent.transform.eulerAngles.y); 
         TTCV.enabled = false;
-        if ((y < 95 && y > 85) || (y > 265 && y < 280))
+        /*if ((y < 95 && y > 85) || (y > 265 && y < 280))
         {
             controller.ignoreHorizontal = true;
         }
         else if (y is > -1 and < 2 or > 175 and < 185)
         {
             controller.ignoreVertical = true;
-        }
+        }*/
     }
 
     
     //turn of everything we can to reset th box and controller states
     private void ReleaseBox()
     {
-        if (currentBox == null)
-        {
-            return;
-        }
+        
 
         GetComponentInChildren<TurnTowardControllerVelocity>().enabled = true;
         controller.ignoreHorizontal = false;
         controller.ignoreVertical = false;
+        if (currentBox == null)
+        {
+            return;
+        }
         currentBox.parent = null;
         currentBox = null;
     }

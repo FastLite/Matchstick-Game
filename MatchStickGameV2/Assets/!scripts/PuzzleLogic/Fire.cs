@@ -15,14 +15,19 @@ public class Fire : MonoBehaviour
     [SerializeField] protected FireSourceType objectType;
     [SerializeField] private float radius;//radius for the sphere check to pass the flame onto the next object
     [SerializeField] private float delay = 1;//delay for passing the flame
-    
+    public bool continueChecking;
+
     /// <summary>
     /// Called when the object should be ignite by something
     /// </summary>
     public void InteractWithFire()
     {
-        if (lit)
-            return;
+        if (!continueChecking)
+        {
+            if (lit)
+                return;
+        }
+        
         switch (objectType)
         {
             case FireSourceType.FirePlace:
@@ -32,7 +37,6 @@ public class Fire : MonoBehaviour
             case FireSourceType.Rope:
                 LightUpAndTransfer();
                 break;
-                 
         }
     }
 
@@ -65,12 +69,14 @@ public class Fire : MonoBehaviour
         if (objectType == FireSourceType.FirePlace)
         {
             if (GetComponentInParent<FirePlaceManagment>()!=null)
-            {
                 GetComponentInParent<FirePlaceManagment>().CheckObjectsInlist();
-            }
-
         }
         Invoke(nameof(TransferFire), delay);//transfer fire after a set delay
+        
+        
+        if (!continueChecking)
+            return;
+        Invoke(nameof(InteractWithFire), 1);// constant check each second until destroyed if needed
     }
 
     
