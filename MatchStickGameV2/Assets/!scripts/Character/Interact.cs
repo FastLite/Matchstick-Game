@@ -1,3 +1,4 @@
+using System;
 using CMF;
 using UnityEngine;
 
@@ -26,7 +27,7 @@ public class Interact : MonoBehaviour
     public Transform playerParent; //Object which will be the parent of the box and drag it along
     private Transform currentBox; //Reference to the box to attach and detach the correct box
 
-    [Header("Torch")] 
+    [Header("Torch")]
     public MyEnum state;
     public GameObject torchGO; //torch gameobject, for visual representation and FireAbove check
 
@@ -134,22 +135,11 @@ public class Interact : MonoBehaviour
         //check the player facing direction and based on that restrict movement on one of the axis
         int y = Mathf.FloorToInt(playerParent.transform.eulerAngles.y); 
         TTCV.enabled = false;
-        /*if ((y < 95 && y > 85) || (y > 265 && y < 280))
-        {
-            controller.ignoreHorizontal = true;
-        }
-        else if (y is > -1 and < 2 or > 175 and < 185)
-        {
-            controller.ignoreVertical = true;
-        }*/
     }
-
     
     //turn of everything we can to reset th box and controller states
     private void ReleaseBox()
     {
-        
-
         GetComponentInChildren<TurnTowardControllerVelocity>().enabled = true;
         controller.ignoreHorizontal = false;
         controller.ignoreVertical = false;
@@ -160,7 +150,6 @@ public class Interact : MonoBehaviour
         currentBox.parent = null;
         currentBox = null;
     }
-
     
     //Change player torch state and activate torch gameobject
     void GrabTorch()
@@ -170,5 +159,12 @@ public class Interact : MonoBehaviour
         state = MyEnum.WithTorch;
         torchGO.SetActive(true);
         torchGO.GetComponent<IgniteFireAbove>().enabled = true;
+    }
+
+    public void ChangeTorchState(string updatedState)
+    {
+
+        object parsed = Enum.Parse(typeof(MyEnum), updatedState);
+        state = (MyEnum) parsed;
     }
 }

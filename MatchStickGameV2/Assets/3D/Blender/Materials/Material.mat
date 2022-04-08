@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Material
+  m_Shader: {fileID: 4800000, guid: 766736548846cdf459a9766614dcccab, type: 3}
+  m_Parent: {fileID: 2100000, guid: 4ce6cb76e54e85748b98825ba72647a4, type: 2}
+  m_ModifiedSerializedProperties: 0
+  m_ShaderKeywords: _EMISSIVE_SIMPLE _IS_ANGELRING_OFF _IS_CLIPPING_OFF _IS_OUTLINE_CLIPPING_NO
+    _OUTLINE_POS
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    IgnoreProjection: False
+    RenderType: Opaque
+  disabledShaderPasses:
+  - SRPDEFAULTUNLIT
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _1st_ShadeMap:
+        m_Texture: {fileID: 2800000, guid: 3c8513b01e3415d4694f3aea7f4c6701, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _2nd_ShadeMap:
+        m_Texture: {fileID: 2800000, guid: 3c8513b01e3415d4694f3aea7f4c6701, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 3c8513b01e3415d4694f3aea7f4c6701, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _1st2nd_Shades_Feather: 0.149
+    - _1st_ShadeColor_Feather: 0.4
+    - _1st_ShadeColor_Step: 0.853
+    - _2nd_ShadeColor_Feather: 0.149
+    - _2nd_ShadeColor_Step: 0.869
+    - _Add_Antipodean_RimLight: 1
+    - _BaseColor_Step: 0.853
+    - _BaseShade_Feather: 0.4
+    - _HighColor_Power: 0.482
+    - _Is_BlendAddToHiColor: 1
+    - _Is_BlendBaseColor: 1
+    - _Is_SpecularToHighColor: 1
+    - _MatCap: 0
+    - _OUTLINE: 1
+    - _Outline_Width: 39.35
+    - _RimLight: 0
+    - _RimLight_Power: 0
+    - _ShadeColor_Step: 0.869
+    m_Colors:
+    - _1st_ShadeColor: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+    - _2nd_ShadeColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+    - _Ap_RimLightColor: {r: 0.4779411, g: 0.056228347, b: 0.056228347, a: 1}
+    - _BaseColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+    - _Color: {r: 0.9622641, g: 0.9622641, b: 0.9622641, a: 1}
+    - _HighColor: {r: 0, g: 0.5, b: 0.055555582, a: 1}
+    - _Outline_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _RimLightColor: {r: 0.75471693, g: 0.7084372, b: 0.73230773, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+--- !u!114 &4557783867931715000
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 6
