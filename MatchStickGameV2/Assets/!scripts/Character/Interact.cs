@@ -121,7 +121,7 @@ public class Interact : MonoBehaviour
         else
         {
             //Raycast hit nothing? Hide tip and do nothing
-            //ui.HideTip();
+            ui.HideTip();
             ReleaseBox();
         }
     }
