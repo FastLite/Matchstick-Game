@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 1469418506376856850}
   - component: {fileID: 1469418506376856851}
   - component: {fileID: 1469418506376856854}
-  - component: {fileID: 1469418506376856853}
+  - component: {fileID: 547657700273446596}
   m_Layer: 0
   m_Name: TopDownWalker
   m_TagString: Untagged
@@ -607,17 +607,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f5e44db14072ea4c964da3b192181c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 50
+  movementSpeed: 7
   airControlRate: 100
   jumpSpeed: 5
   jumpDuration: 0.1
-  airFriction: 0.02
+  airFriction: 30
   groundFriction: 100
   gravity: 30
   slideGravity: 5
   slopeLimit: 80
   useLocalMomentum: 0
-  cameraTransform: {fileID: 1469418507295050121}
+  cameraTransform: {fileID: 0}
   ignoreHorizontal: 0
   ignoreVertical: 0
 --- !u!114 &1469418506376856851
@@ -654,26 +654,20 @@ MonoBehaviour:
   verticalInputAxis: Vertical
   jumpKey: 32
   useRawInput: 1
---- !u!95 &1469418506376856853
-Animator:
-  serializedVersion: 4
+--- !u!114 &547657700273446596
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469418506376856861}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1bccbcdd8106d0c4ca5cc2195c1498a5, type: 3}
-  m_Controller: {fileID: 9100000, guid: 77e59d11b5337294ca08fa4011e7ff5e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4650acabe1d6aa6429e42554f1f0feb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useStrafeAnimations: 0
+  landVelocityThreshold: 5
 --- !u!1 &1469418506382177610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1114,7 @@ Transform:
   - {fileID: 1469418506537678782}
   - {fileID: 1469418506376856860}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826520612106863280
 GameObject:
