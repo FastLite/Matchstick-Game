@@ -227,7 +227,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53914
+  m_Name: pb_Mesh77650
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1389,7 +1389,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53824
+  m_Name: pb_Mesh77560
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1743,7 +1743,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53844
+  m_Name: pb_Mesh77580
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2016,7 +2016,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53966
+  m_Name: pb_Mesh77702
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3451,6 +3451,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 547657700273446596, guid: fb0692a703ca14a44b9ac5a5a9b4d900,
+        type: 3}
+      propertyPath: useStrafeAnimations
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1436319690337804818, guid: fb0692a703ca14a44b9ac5a5a9b4d900,
         type: 3}
       propertyPath: m_RootOrder
@@ -3504,6 +3509,11 @@ PrefabInstance:
     - target: {fileID: 1436319690337804818, guid: fb0692a703ca14a44b9ac5a5a9b4d900,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469418506376856850, guid: fb0692a703ca14a44b9ac5a5a9b4d900,
+        type: 3}
+      propertyPath: gravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1469418506376856850, guid: fb0692a703ca14a44b9ac5a5a9b4d900,

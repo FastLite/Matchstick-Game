@@ -613,7 +613,7 @@ MonoBehaviour:
   jumpDuration: 0.1
   airFriction: 30
   groundFriction: 100
-  gravity: 30
+  gravity: 0
   slideGravity: 5
   slopeLimit: 80
   useLocalMomentum: 0
@@ -667,6 +667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useStrafeAnimations: 0
+  IsPushing: 0
   landVelocityThreshold: 5
 --- !u!1 &1469418506382177610
 GameObject:
@@ -1444,6 +1445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6527187339054613558}
   - component: {fileID: 1943796965847524312}
+  - component: {fileID: 2219824971074871471}
   m_Layer: 0
   m_Name: MatchStick
   m_TagString: Untagged
@@ -1586,6 +1588,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0041460097, y: 0.5176294, z: -0.009893764}
     m_Extent: {x: 0.59320724, y: 0.5203129, z: 0.09685734}
   m_DirtyAABB: 0
+--- !u!95 &2219824971074871471
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346924359559910582}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 1bccbcdd8106d0c4ca5cc2195c1498a5, type: 3}
+  m_Controller: {fileID: 9100000, guid: 77e59d11b5337294ca08fa4011e7ff5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3349885859730243674
 GameObject:
   m_ObjectHideFlags: 0

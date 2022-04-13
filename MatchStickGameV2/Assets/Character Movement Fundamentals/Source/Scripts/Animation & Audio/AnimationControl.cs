@@ -15,6 +15,8 @@ namespace CMF
 		//Whether the character is using the strafing blend tree;
 		public bool useStrafeAnimations = false;
 
+		public bool IsPushing = false;
+
 		//Velocity threshold for landing animation;
 		//Animation will only be triggered if downward velocity exceeds this threshold;
 		public float landVelocityThreshold = 5f;
@@ -72,7 +74,9 @@ namespace CMF
 				animator.SetFloat("StrafeSpeed", _localVelocity.x);
 			}
 
+
 			//Pass values to animator;
+			animator.SetBool("IsPushing", IsPushing);
 			animator.SetBool("IsGrounded", controller.IsGrounded());
 			animator.SetBool("IsStrafing", useStrafeAnimations);
 		}
