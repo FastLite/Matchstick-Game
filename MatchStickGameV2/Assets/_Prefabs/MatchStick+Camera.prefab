@@ -613,7 +613,7 @@ MonoBehaviour:
   jumpDuration: 0.1
   airFriction: 30
   groundFriction: 100
-  gravity: 0
+  gravity: 10
   slideGravity: 5
   slopeLimit: 80
   useLocalMomentum: 0
