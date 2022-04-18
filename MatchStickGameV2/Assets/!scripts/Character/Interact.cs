@@ -140,9 +140,7 @@ public class Interact : MonoBehaviour
     //turn of everything we can to reset th box and controller states
     private void ReleaseBox()
     {
-        GetComponentInChildren<TurnTowardControllerVelocity>().enabled = true;
-        controller.ignoreHorizontal = false;
-        controller.ignoreVertical = false;
+        
         if (currentBox == null)
         {
             return;
