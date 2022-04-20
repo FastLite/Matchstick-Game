@@ -515,6 +515,8 @@ GameObject:
   - component: {fileID: 1469418506376856854}
   - component: {fileID: 547657700273446596}
   - component: {fileID: 2053234056291677344}
+  - component: {fileID: 2097730395078898965}
+  - component: {fileID: 3121084127584478523}
   m_Layer: 0
   m_Name: TopDownWalker
   m_TagString: Untagged
@@ -669,6 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useStrafeAnimations: 0
   IsPushing: 0
+  IsGrounded: 1
   landVelocityThreshold: 5
 --- !u!114 &2053234056291677344
 MonoBehaviour:
@@ -693,6 +696,37 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3efdd4c11a4bdc54a9087ab115c1de9e, type: 3}
   jumpClip: {fileID: 8300000, guid: 99ab8a4503de1f448ad764a5c4cdf9cc, type: 3}
   landClip: {fileID: 8300000, guid: c212aa2d646dfe248b7c96b4f0e4cb27, type: 3}
+--- !u!114 &2097730395078898965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469418506376856861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea00ad25c692c9d4881f3c19e75ca56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1469418506376856850}
+  turnSpeed: 1000
+  ignoreControllerMomentum: 0
+--- !u!114 &3121084127584478523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469418506376856861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f625fafc0c6c44c9831015f06845e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1469418506376856860}
+  smoothSpeed: 20
+  extrapolateRotation: 0
+  updateType: 0
 --- !u!1 &1469418506382177610
 GameObject:
   m_ObjectHideFlags: 0
