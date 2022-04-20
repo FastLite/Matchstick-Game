@@ -16,6 +16,8 @@ namespace CMF
 		public bool useStrafeAnimations = false;
 
 		public bool IsPushing = false;
+		public bool IsGrounded = true;
+
 
 		//Velocity threshold for landing animation;
 		//Animation will only be triggered if downward velocity exceeds this threshold;

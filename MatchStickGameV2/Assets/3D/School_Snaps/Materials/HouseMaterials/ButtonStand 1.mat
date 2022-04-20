@@ -168,11 +168,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _1st2nd_Shades_Feather: 1
-    - _1st_ShadeColor_Feather: 0.203
-    - _1st_ShadeColor_Step: 0.88
-    - _2nd_ShadeColor_Feather: 1
-    - _2nd_ShadeColor_Step: 0.662
+    - _1st2nd_Shades_Feather: 0.56
+    - _1st_ShadeColor_Feather: 0.0001
+    - _1st_ShadeColor_Step: 0.83
+    - _2nd_ShadeColor_Feather: 0.56
+    - _2nd_ShadeColor_Step: 0.91
     - _ARSampler_AlphaOn: 0
     - _AR_OffsetU: 0
     - _AR_OffsetV: 0.3
@@ -182,8 +182,8 @@ Material:
     - _Ap_RimLight_FeatherOff: 0
     - _Ap_RimLight_Power: 0.1
     - _AutoRenderQueue: 1
-    - _BaseColor_Step: 0.88
-    - _BaseShade_Feather: 0.203
+    - _BaseColor_Step: 0.83
+    - _BaseShade_Feather: 0.0001
     - _Base_Speed: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
@@ -255,7 +255,7 @@ Material:
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
     - _Offset_Z: 0.08
-    - _Outline_Width: 18.7
+    - _Outline_Width: 20.26
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -271,7 +271,7 @@ Material:
     - _Scroll_EmissiveU: 0
     - _Scroll_EmissiveV: 0
     - _Set_SystemShadowsToBase: 1
-    - _ShadeColor_Step: 0.662
+    - _ShadeColor_Step: 0.91
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -310,19 +310,19 @@ Material:
     - _utsVersionY: 6
     - _utsVersionZ: 1
     m_Colors:
-    - _1st_ShadeColor: {r: 0.4339623, g: 0.28100765, b: 0.12486649, a: 1}
-    - _2nd_ShadeColor: {r: 0.26415092, g: 0.14169297, b: 0.033641864, a: 1}
+    - _1st_ShadeColor: {r: 0.8962264, g: 0.5797459, b: 0.43543077, a: 1}
+    - _2nd_ShadeColor: {r: 0.15592737, g: 0.27818146, b: 0.4528302, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 0.754717, g: 0.4752033, b: 0.13883947, a: 1}
-    - _Color: {r: 0.75471693, g: 0.47520322, b: 0.13883942, a: 1}
+    - _BaseColor: {r: 0.8474546, g: 0.857982, b: 0.8679245, a: 1}
+    - _Color: {r: 0.8474546, g: 0.857982, b: 0.8679245, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
     - _HighColor: {r: 1, g: 0, b: 0, a: 1}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
     - _Outline_Color: {r: 0, g: 0, b: 0, a: 1}
-    - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimLightColor: {r: 0.6367924, g: 0.8545342, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
