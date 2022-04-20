@@ -124,6 +124,11 @@ public class Interact : MonoBehaviour
             ui.HideTip();
             ReleaseBox();
         }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            ReleaseBox();
+        }
     }
 
     void PickUpBox(Transform box)
@@ -140,7 +145,6 @@ public class Interact : MonoBehaviour
     //turn of everything we can to reset th box and controller states
     private void ReleaseBox()
     {
-        
         if (currentBox == null)
         {
             return;

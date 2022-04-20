@@ -550,10 +550,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98ace8715c2a184ca85247b18eb0853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepHeightRatio: 0
-  colliderHeight: 1.72
+  stepHeightRatio: 0.27
+  colliderHeight: 2.06
   colliderThickness: 0.53
-  colliderOffset: {x: 0, y: 0.515, z: 0}
+  colliderOffset: {x: 0, y: 0.17, z: 0}
   sensorType: 0
   isInDebugMode: 0
   sensorArrayRows: 1
@@ -573,13 +573,13 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469418506376856861}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e22c35a45fac28e4eb8a295407e775b7, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.265
-  m_Height: 1.72
+  m_Height: 1.5037999
   m_Direction: 1
-  m_Center: {x: 0, y: 0.8858, z: 0}
+  m_Center: {x: 0, y: 0.6283, z: 0}
 --- !u!54 &1469418506376856849
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -609,16 +609,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 7
-  airControlRate: 100
+  airControlRate: 2
   jumpSpeed: 5
-  jumpDuration: 0.1
-  airFriction: 30
+  jumpDuration: 0.2
+  airFriction: 0.5
   groundFriction: 100
-  gravity: 10
+  gravity: 30
   slideGravity: 5
   slopeLimit: 80
-  useLocalMomentum: 0
-  cameraTransform: {fileID: 0}
+  useLocalMomentum: 1
+  cameraTransform: {fileID: 1469418506140705065}
   ignoreHorizontal: 0
   ignoreVertical: 0
 --- !u!114 &1469418506376856851
@@ -884,8 +884,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1469418507295050121}
-  - component: {fileID: 1469418507295050127}
-  - component: {fileID: 1469418507295050120}
   m_Layer: 0
   m_Name: CameraControls
   m_TagString: Untagged
@@ -909,40 +907,6 @@ Transform:
   m_Father: {fileID: 1469418506537678782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1469418507295050127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469418507295050122}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9be22bce34010f43b12190b15d84b00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upperVerticalLimit: 0
-  lowerVerticalLimit: 0
-  cameraSpeed: 250
-  smoothCameraRotation: 0
-  cameraSmoothingFactor: 25
---- !u!114 &1469418507295050120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469418507295050122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9d20421a8e3e44e88315dc70ee11e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseHorizontalAxis: Mouse X
-  mouseVerticalAxis: Mouse Y
-  invertHorizontalInput: 0
-  invertVerticalInput: 0
-  mouseInputMultiplier: 0.01
 --- !u!1 &1469418507578506496
 GameObject:
   m_ObjectHideFlags: 0

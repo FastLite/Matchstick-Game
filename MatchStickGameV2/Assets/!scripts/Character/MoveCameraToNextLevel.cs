@@ -13,8 +13,8 @@ public class MoveCameraToNextLevel : MonoBehaviour
     public virtual void Move()
     {
         var position = transform.position;
-        position = new Vector3(position.x + x, position.y + y, position.z + z);
-        transform.position = position;
+        position = new Vector3(transform.localPosition.x + x, transform.localPosition.y + y, transform.localPosition.z + z);
+        transform.localPosition = position;
     }
 
     
